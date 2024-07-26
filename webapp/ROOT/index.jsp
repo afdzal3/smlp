@@ -175,9 +175,9 @@
         }
 
         .devdiv {
-                background-color: red;
-                color: white;
-            }
+            background-color: red;
+            color: white;
+        }
 
         @media (max-width: 760px) {
             body {
@@ -241,52 +241,54 @@
                 <h2 class="devdiv">
                     DEV
                 </h2>
-            <% } else { %>
-                <h2 style="background-color: <%= barColor %> ; color:white">
-                    <%= env %>
-                </h2>
-            <% } %>
+                <% } else { %>
+                    <h2 style="background-color: <%= barColor %> ; color:white">
+                        <%= env %>
+                    </h2>
+                    <% } %>
 
-                    <div class="wrapper">
-                        <div class="container">
-                            <div class="header">
-                                <div class="header-content">
-                                    <h1>INTEGRATED REQUISITION & INTERACTIVE SERVICE DESK</h1>
-                                    <img src="/images/iris3-logo1.png" alt="IRIS3 Logo">
+                        <div class="wrapper">
+                            <div class="container">
+                                <div class="header">
+                                    <div class="header-content">
+                                        <h1>INTEGRATED REQUISITION & INTERACTIVE SERVICE DESK</h1>
+                                        <img src="/images/iris3-logo1.png" alt="IRIS3 Logo">
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    <div>
+                                        <a href="<%= spUrl %>">
+                                            <img src="/images/SP-icon.png" alt="Service Portal">
+                                            <h2>SERVICE PORTAL (SP)</h2>
+                                        </a>
+
+                                    </div>
+                                    <div>
+                                        <a href="#">
+                                            <img src="/images/SS-icon1.png" alt="Self Service">
+                                            <h2>SELF SERVICE (SS)</h2>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="<%= smUrl %>">
+                                            <img src="/images/SM-icon.png" alt="Service Manager">
+                                            <h2>SERVICE MANAGER (SM)</h2>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="content">
-                                <div>
-                                    <a href="<%= spUrl %>">
-                                        <img src="/images/SP-icon.png" alt="Service Portal">
-                                        <h2>SERVICE PORTAL (SP)</h2>
-                                    </a>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <img src="/images/SS-icon1.png" alt="Self Service">
-                                        <h2>SELF SERVICE (SS)</h2>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="<%= spUrl %>">
-                                        <img src="/images/SM-icon.png" alt="Service Manager">
-                                        <h2>SERVICE MANAGER (SM)</h2>
-                                    </a>
-                                </div>
+
+
+                            <div class="footer">
+                                <a href="https://intra.tm.com.my/wg/git/insight/Pages/IRISGuidelines.aspx?RootFolder=/wg/git/insight/IRIS%20Guidelines/IRIS%202%2E0&amp;FolderCTID=0x012000A7EF0898282BDD4291C8332667950A78&amp;View">GUIDELINE</a>
+                                <a target="_blank" href="/images/IRIS - FAQ.pdf">FAQ</a>
+                                <a href="https://idss.tm.com.my/idss/">FORGOT PASSWORD</a>
+                                <a target="_blank" href="/images/Contacts Us.pdf">CONTACT US</a>
                             </div>
                         </div>
-
-                        <div class="footer">
-                            <a href="https://intra.tm.com.my/wg/git/insight/Pages/IRISGuidelines.aspx?RootFolder=/wg/git/insight/IRIS%20Guidelines/IRIS%202%2E0&amp;FolderCTID=0x012000A7EF0898282BDD4291C8332667950A78&amp;View">GUIDELINE</a>
-                            <a target="_blank" href="/images/IRIS - FAQ.pdf">FAQ</a>
-                            <a href="https://idss.tm.com.my/idss/">FORGOT PASSWORD</a>
-                            <a target="_blank" href="/images/Contacts Us.pdf">CONTACT US</a>
-                        </div>
-                    </div>
-                    <!-- IRIS 3 ENDS -->
+                        <!-- IRIS 3 ENDS -->
         </div>
 
         <footer class="app-footer sticky-footer">
