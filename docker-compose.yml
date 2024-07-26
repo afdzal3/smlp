@@ -7,5 +7,5 @@ services:
       - "9090:8080"  # Change 9090 to any port you prefer
     volumes:
       - type: bind
-        source: ./webapp
+        source: ./webapp/ROOT
         target: /usr/local/tomcat/webapps/ROOT
