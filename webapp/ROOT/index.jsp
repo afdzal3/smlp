@@ -241,9 +241,11 @@
                 <h2 class="devdiv">
                     DEV
                 </h2>
-
-
-                <% } %>
+            <% } else { %>
+                <h2 style="background-color: <%= barColor %> ; color:white">
+                    <%= env %>
+                </h2>
+            <% } %>
 
                     <div class="wrapper">
                         <div class="container">
@@ -278,7 +280,7 @@
                         </div>
 
                         <div class="footer">
-                            <a href="https://ibpm.tm.com.my">GUIDELINE</a>
+                            <a href="https://intra.tm.com.my/wg/git/insight/Pages/IRISGuidelines.aspx?RootFolder=/wg/git/insight/IRIS%20Guidelines/IRIS%202%2E0&amp;FolderCTID=0x012000A7EF0898282BDD4291C8332667950A78&amp;View">GUIDELINE</a>
                             <a target="_blank" href="/images/IRIS - FAQ.pdf">FAQ</a>
                             <a href="https://idss.tm.com.my/idss/">FORGOT PASSWORD</a>
                             <a target="_blank" href="/images/Contacts Us.pdf">CONTACT US</a>
