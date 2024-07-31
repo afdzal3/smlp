@@ -265,7 +265,7 @@
 
                                     </div>
                                     <div>
-                                        <a href="#">
+                                        <a href="<%= ssUrl %>">
                                             <img src="/images/SS-icon1.png" alt="Self Service">
                                             <h2>SELF SERVICE (SS)</h2>
                                         </a>
@@ -282,10 +282,10 @@
 
 
                             <div class="footer">
-                                <a href="https://intra.tm.com.my/wg/git/insight/Pages/IRISGuidelines.aspx?RootFolder=/wg/git/insight/IRIS%20Guidelines/IRIS%202%2E0&amp;FolderCTID=0x012000A7EF0898282BDD4291C8332667950A78&amp;View">GUIDELINE</a>
+                                <a href="https://ibpm.tm.com.my">GUIDELINE</a>
                                 <a target="_blank" href="/images/IRIS - FAQ.pdf">FAQ</a>
                                 <a href="https://idss.tm.com.my/idss/">FORGOT PASSWORD</a>
-                                <a target="_blank" href="/images/Contacts Us.pdf">CONTACT US</a>
+                                <a target="_blank" href="/images/Contact_Us_v5.pdf">CONTACT US</a>
                             </div>
                         </div>
                         <!-- IRIS 3 ENDS -->
