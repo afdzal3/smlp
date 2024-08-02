@@ -4,7 +4,7 @@ String smUrl = "https://iris3.tm.com.my/sm/index.do";
 String ssUrl = "https://iris3.tm.com.my/sm/ess.do";
 String spUrl = "";
 String env = "dev";
-String barColor = "cadetblue";
+String barColor = "pink";
 
 %>
 

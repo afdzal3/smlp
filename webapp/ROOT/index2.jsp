@@ -52,8 +52,12 @@
                 <div class="col-md-7 col-sm-12 leftDiv ">
                     <div class="row">
                         <div class="col" style="background-color: <%= barColor %>">
-                            <h3 style="color:<%= barColor %>; opacity: 0.3;">
-                            <%= env %>
+                            <h3 style="color:<%= barColor %>">
+                            <% if (env.equals("dev")) { %>
+                                <span style="color:red"><%= env %> </span>
+                            <% } else { %>
+                                <%= env %>
+                            <% } %>
                             </h3>
                         </div>
 
@@ -116,7 +120,7 @@
             </div><!-- /row-->
             <footer class="row text-gray mt-auto fixed-bottom"
                 style="background-color:<%= barColor %>">
-                <div class="col d-block d-sm-none " >
+                <div class="col d-block d-md-none " >
                     <img src="/images/ynin-tm-logo.png" class="m-1">
                 </div>
                 <div class="col float-end text-end " >
