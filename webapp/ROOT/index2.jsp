@@ -59,7 +59,7 @@
                                     </span>
                                     <% } else { %>
                                         <%= env %>
-                                            <% } %>
+                                    <% } %>
                             </h3>
                         </div>
 
@@ -68,62 +68,59 @@
                                 <h2 class="mt-1 fs-2 fw-bold">INTEGRATED REQUISITION & INTERACTIVE SERVICE DESK </h2>
                             </div>
                         </div><!-- /row-->
-                        <div class="row">
+                        <div class="row m-2">
                             <div class="col-12 text-center">
                                 <img src="/images/iris3-logo1.png" alt="IRIS3 Logo" class="img irislogo">
                             </div>
                         </div><!-- /row-->
                         <div class="row text-center float-center m-0">
 
-                            <div class="card col m-2 ">
+                            <div class="card col mx-1 rounded-0 border-0 rounded-top">
                                 <a href="<%= spUrl %>">
                                     <img src="/images/SP-icon.png" alt="Service Portal" class="card-img-top m-1">
-
-                                    <div class="card-body">
-                                        <div class="card-title text-center fs-small">
-                                            SERVICE PORTAL (SP)
-                                        </div>
-                                    </div>
                                 </a>
-                    
-                                    (accessible via intranet/vpn only)
-                                    
-                    
-
-
-                                
                             </div>
-                            <div class="card col m-2">
+                            <div class="card col mx-1 rounded-0 border-0 rounded-top">
                                 <a href="<%= ssUrl %>">
                                     <img src="/images/SS-icon1.png" alt="Self Service" class="card-img-top m-1">
-                                    <div class="card-body">
-                                        <div class="card-title text-center fs-6">
-                                            <span class="fs-6">SELF SERVICE (SS)</span>
-                                        </div>
-                                    </div>
                                 </a>
-
                             </div>
-                            <div class="card col m-2">
+                            <div class="card col mx-1 rounded-0 border-0 rounded-top">
                                 <a href="<%= smUrl %>">
                                     <img src="/images/SM-icon.png" alt="Service Manager" class="card-img-top m-1">
+                                </a>
+                                <!--
                                     <div class="card-body">
                                         <div class="card-title text-center">SERVICE MANAGER (SM)</div>
                                     </div>
-                                </a>
+                                -->
+
 
                             </div>
                         </div><!-- /row-->
-
                         <div class="row text-center float-center m-0">
-                            <div class="col m-2"></div>
-                            <div class="col m-2"></div>
-                            <div class="col m-2"></div>
+
+                            <a href="<%= spUrl %>" class="col mx-1  btn btn-outline-secondary rounded-0 border-0">
+                                SERVICE PORTAL (SP)
+                                <br />
+                                (accessible via intranet/vpn only)
+                            </a>
+
+                            <a href="<%= ssUrl %>" class="col mx-1  btn btn-outline-secondary rounded-0 border-0">
+                                SELF SERVICE (SS)
+                            </a>
+
+                            <a href="<%= smUrl %>" class="col mx-1  btn btn-outline-secondary rounded-0 border-0">
+                                SERVICE MANAGER (SM)
+                            </a>
+
+
+                          
 
 
 
                         </div>
-                        <div class="row">
+                        <div class="row mt-2">
                             <div class="col-12 text-center">
                                 <a href="https://ibpm.tm.com.my" class="btn btn-link">GUIDELINE</a>
                                 <a target="_blank" href="/images/IRIS - FAQ.pdf" class="btn btn-link">FAQ</a>
