@@ -53,11 +53,13 @@
                     <div class="row">
                         <div class="col" style="background-color: <%= barColor %>">
                             <h3 style="color:<%= barColor %>">
-                            <% if (env.equals("dev")) { %>
-                                <span style="color:red"><%= env %> </span>
-                            <% } else { %>
-                                <%= env %>
-                            <% } %>
+                                <% if (env.equals("dev")) { %>
+                                    <span style="color:red">
+                                        <%= env %>
+                                    </span>
+                                    <% } else { %>
+                                        <%= env %>
+                                            <% } %>
                             </h3>
                         </div>
 
@@ -76,19 +78,31 @@
                             <div class="card col m-2 ">
                                 <a href="<%= spUrl %>">
                                     <img src="/images/SP-icon.png" alt="Service Portal" class="card-img-top m-1">
+
                                     <div class="card-body">
-                                        <div class="card-title text-center fs-small">SERVICE PORTAL (SP)</div>
+                                        <div class="card-title text-center fs-small">
+                                            SERVICE PORTAL (SP)
+                                        </div>
                                     </div>
                                 </a>
+                    
+                                    (accessible via intranet/vpn only)
+                                    
+                    
+
+
+                                
                             </div>
                             <div class="card col m-2">
                                 <a href="<%= ssUrl %>">
                                     <img src="/images/SS-icon1.png" alt="Self Service" class="card-img-top m-1">
                                     <div class="card-body">
                                         <div class="card-title text-center fs-6">
-                                            <span class="fs-6">SELF SERVICE (SS)</span></div>
+                                            <span class="fs-6">SELF SERVICE (SS)</span>
+                                        </div>
                                     </div>
                                 </a>
+
                             </div>
                             <div class="card col m-2">
                                 <a href="<%= smUrl %>">
@@ -97,8 +111,18 @@
                                         <div class="card-title text-center">SERVICE MANAGER (SM)</div>
                                     </div>
                                 </a>
+
                             </div>
                         </div><!-- /row-->
+
+                        <div class="row text-center float-center m-0">
+                            <div class="col m-2"></div>
+                            <div class="col m-2"></div>
+                            <div class="col m-2"></div>
+
+
+
+                        </div>
                         <div class="row">
                             <div class="col-12 text-center">
                                 <a href="https://ibpm.tm.com.my" class="btn btn-link">GUIDELINE</a>
@@ -118,12 +142,11 @@
                     <img src="/images/ynin-tm-logo.png">
                 </div>
             </div><!-- /row-->
-            <footer class="row text-gray mt-auto fixed-bottom"
-                style="background-color:<%= barColor %>">
-                <div class="col d-block d-md-none " >
+            <footer class="row text-gray mt-auto fixed-bottom" style="background-color:<%= barColor %>">
+                <div class="col d-block d-md-none ">
                     <img src="/images/ynin-tm-logo.png" class="m-1">
                 </div>
-                <div class="col float-end text-end " >
+                <div class="col float-end text-end ">
                     <span class="fst-italic text-white">Powered by</span>
                     <img src="/images/GITD-Rework.png" class="img-fluid bottom-right-image m-1">
                 </div>
