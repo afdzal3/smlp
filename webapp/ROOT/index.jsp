@@ -1,305 +1,183 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+<%@ include file="var.jsp" %>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <link rel="icon" href="/images/iris3-logo1.png" />
 
-    <link rel="shortcut icon" href="http://www.yoursite.com/images/iris3-logo1.png"> 
+        <title>IRIS</title>
 
-    <title>IRIS</title>
+        <!-- Include Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            crossorigin="anonymous">
 
-
-<body>
-
-
-    <!-- IRIS 3 STARTS -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IRIS 3.0 - Integrated Requisition & Interactive Service Desk</title>
-    <style>
-        body {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            min-height: 100vh;
-            position: relative;
-            background-color: #f4f4f4;
-            overflow: hidden;
-        }
-
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 45%;
-            height: 100%;
-            background-image: url('/images/Background-IRIS3.jpg');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.5;
-            z-index: -1;
-        }
-
-        .top-right-image,
-        .bottom-right-image {
-            position: fixed;
-            right: 0;
-            z-index: 0;
-        }
-
-        .top-right-image {
-            top: 0;
-        }
-
-        .bottom-right-image {
-            bottom: 0;
-            width: 99px;
-            height: 51px;
-        }
-
-        .wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            max-width: 900px;
-            margin-left: 20px;
-            z-index: 1;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .container {
-            flex: 1;
-            padding: 20px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .header,
-        .footer {
-            padding: 20px;
-            width: 100%;
-            text-align: center;
-        }
-
-        .header-content {
-            display: inline-block;
-            text-align: center;
-        }
-
-        .header h1 {
-            font-size: 1.6vw;
-            /* Responsive font size */
-            margin: 0;
-            margin-bottom: 25px;
-        }
-
-        .header img {
-            width: 60vw;
-            /* Responsive image size */
-            max-width: 249px;
-            height: auto;
-            display: block;
-            margin: 0 auto 0;
-        }
-
-        .content {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-wrap: nowrap;
-            margin-bottom: 20px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .content div {
-            padding: 20px;
-            margin: 10px;
-            border-radius: 5px;
-            /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
-            width: calc(100% - 40px);
-            max-width: 200px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            box-sizing: border-box;
-        }
-
-        .content div a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .content h2 {
-            font-size: 1.1vw;
-            /* Responsive font size */
-            margin: 0;
-            margin-top: 5px;
-        }
-
-        .content div img {
-            width: 30vw;
-            /* Responsive image size */
-            max-width: 130px;
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: auto;
-            width: 100%;
-        }
-
-        .footer a {
-            display: inline-block;
-            margin: 0 10px;
-            padding: 10px 20px;
-            color: #333;
-            text-decoration: underline;
-            border-radius: 5px;
-        }
-
-        .footer a:hover {
-            text-decoration: none;
-            background-color: rgba(0, 0, 0, 0.1);
-        }
-
-        .devdiv {
-            background-color: red;
-            color: white;
-        }
-
-        @media (max-width: 760px) {
-            body {
-                align-items: center;
-                overflow: scroll;
+        <style>
+            .iris3 {
+                background: url('/images/Background-IRIS3.jpg') no-repeat;
+                background-size: cover;
+                background-position: center;
+                z-index: 1;
             }
 
-            body::before {
-                display: none;
+            .leftDiv {
+                background-color: #f4f4f4;
+                height: 100vh;
             }
 
-            .top-right-image,
             .bottom-right-image {
-                display: none;
+                width: 99px;
+                height: 51px;
             }
 
-            .wrapper {
-                margin-left: 0;
-            }
-
-            .header h1 {
-                font-size: 3.5vw;
-            }
-
-            .header img {
-                width: 70vw;
-                align-items: center;
-            }
-
-            .content div {
-                width: calc(50% - 40px);
-                margin: 10px 5px;
-            }
-
-            .content h2 {
-                font-size: 3.3vw;
-            }
-
-            .content div img {
+            .irislogo {
                 width: 20vw;
+                max-width: 249px;
+                height: auto;
+                display: block;
+                margin: 0 auto 0;
             }
 
+            .serviceLogo {
+
+                height: 10em;
+                text-align: center;
+                object-fit: cover;
 
 
 
-        }
-    </style>
-    <!-- IRIS 3 ENDS -->
-    <%@ include file="var.jsp" %>
+            }
 
-        <div class="container-xl">
-            <!-- HTML Start -->
+            .serviceLogoDiv {
 
-            <!-- IRIS 3 STARTS -->
-            <img src="/images/ynin-tm-logo.png" alt="Top Right" class="top-right-image">
-            <p class="bottom-right-image">Powered by</p>
-            <img src="/images/GITD-Rework.png" alt="Bottom Right" class="bottom-right-image">
+                height: 12em;
+                padding: 1em;
+
+            }
+
+            /* Remove the empty ruleset */
+        </style>
+
+    </head>
+
+    <body class="">
 
 
-            <% if (env.equals("dev")) { %>
-                <h2 class="devdiv">
-                    DEV
-                </h2>
-                <% } else { %>
-                    <h2 style="background-color: <%= barColor %> ; color:white">
-                        <%= env %>
-                    </h2>
-                    <% } %>
-
-                        <div class="wrapper">
-                            <div class="container">
-                                <div class="header">
-                                    <div class="header-content">
-                                        <h1>INTEGRATED REQUISITION & INTERACTIVE SERVICE DESK</h1>
-                                        <img src="/images/iris3-logo1.png" alt="IRIS3 Logo">
-                                    </div>
-                                </div>
-
-                                <div class="content">
-                                    <div>
-                                        <a href="<%= spUrl %>">
-                                            <img src="/images/SP-icon.png" alt="Service Portal">
-                                            <h2>SERVICE PORTAL (SP)</h2>
-                                        </a>
-
-                                    </div>
-                                    <div>
-                                        <a href="<%= ssUrl %>">
-                                            <img src="/images/SS-icon1.png" alt="Self Service">
-                                            <h2>SELF SERVICE (SS)</h2>
-                                        </a>
-                                    </div>
-                                    <div>
-                                        <a href="<%= smUrl %>">
-                                            <img src="/images/SM-icon.png" alt="Service Manager">
-                                            <h2>SERVICE MANAGER (SM)</h2>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+        <div class="container-fluid" id="main">
+            <div class="row text-gray mt-auto" style="background-color:<%= barColor %>">
+                <div class="col" style="background-color: <%= barColor %>">
+                    <h3>
+                        <% if (env.equals("dev")) { %>
+                            <span style="color:white">
+                                <%= env %>
+                            </span>
+                            <% } else { %>
+                                <span style="color:<%= barColor %>">
+                                    <%= env %>
+                                </span>
+                                <% } %>
+                    </h3>
+                </div>
+                <div class="col text-end">
+                    <img src="/images/ynin-tm-logo.png">
+                </div>
+            </div><!-- /row-->
 
 
 
-                            <div class="footer">
-                                <a href="https://ibpm.tm.com.my">GUIDELINE</a>
-                                <a target="_blank" href="/images/IRIS - FAQ.pdf">FAQ</a>
-                                <a href="https://idss.tm.com.my/idss/">FORGOT PASSWORD</a>
-                                <a target="_blank" href="/images/Contact_Us_v5.pdf">CONTACT US</a>
-                            </div>
+
+            <div class="row iris3">
+                <div class="col-md-7 col-sm-12 leftDiv ">
+                    <div class="row">
+                        <div class="col-12 align-items-center text-center">
+                            <h4 class="mt-1 fs-4 fw-bold">INTEGRATED REQUISITION & INTERACTIVE SERVICE DESK </h4>
                         </div>
-                        <!-- IRIS 3 ENDS -->
-        </div>
+                    </div><!-- /row-->
+                    <div class="row m-2">
+                        <div class="col-12 text-center">
+                            <img src="/images/iris3-logo1.png" alt="IRIS3 Logo" class="img-fluid irislogo">
+                        </div>
+                    </div><!-- /row-->
+                    <div class="row text-center float-center m-0">
+                        <div class="card col-md-4">
+                            <div class="row">
+                                <div class="col-md-12 col-5 serviceLogoDiv">
+                                    <a href="<%= spUrl %>">
+                                        <img src="/images/SP-icon.png" alt="Service Portal" class="serviceLogo ">
+                                    </a>
+                                </div>
+                                <div class="col-md-12 col-6 card-body">
+                                    <a href="<%= spUrl %>" class="btn btn-outline-secondary w-100 m-0 border-0">
+                                        SERVICE PORTAL (SP)
+                                    </a>
+                                    <br />
+                                    <small class="fst-italic">[Accessible via intranet / VPN only]</small>
+                                </div>
+                            </div><!--inner row-->
+                        </div>
+                        <div class="card col-md-4">
+                            <div class="row">
+                                <div class="col-md-12 col-5 serviceLogoDiv">
+                                    <a href="<%= ssUrl %>">
+                                        <img src="/images/SS-icon1.png" alt="Self Service" class="serviceLogo">
+                                    </a>
+                                </div>
+                                <div class="col-md-12 col-6 card-body">
+                                    <a href="<%= ssUrl %>" class="btn btn-outline-secondary w-100 m-0 border-0 ">
+                                        SELF SERVICE (SS)
+                                    </a>
+                                </div>
+                            </div><!--inner row-->
+                        </div>
+                        <div class="card col-md-4">
+                            <div class="row">
+                                <div class="col-md-12 col-5 serviceLogoDiv">
+                                    <a href="<%= smUrl %>">
+                                        <img src="/images/SM-icon.png" alt="Service Manager" class="serviceLogo">
+                                    </a>
+                                </div>
+                                <div class="col-md-12 col-6 card-body">
+                                    <a href="<%= smUrl %>" class="btn btn-outline-secondary w-100 m-0 border-0 ">
+                                        SERVICE MANAGER (SM)
+                                    </a>
+                                </div>
+                            </div><!--inner row-->
+                        </div>
+                    </div><!-- /row-->
 
-        <footer class="app-footer sticky-footer">
+                    <div class="row mt-2">
+                        <div class="col-12 text-center">
+                            <a href="https://ibpm.tm.com.my" class="btn btn-link">GUIDELINE</a>
+                            <a target="_blank" href="/images/IRIS - FAQ.pdf" class="btn btn-link">FAQ</a>
+                            <a href="https://idss.tm.com.my/idss/" class="btn btn-link">FORGOT PASSWORD</a>
+                            <a target="_blank" href="/images/Contact_Us_v5.pdf" class="btn btn-link">CONTACT
+                                US</a>
+
+                        </div>
+
+                    </div><!-- /row-->
+
+                </div><!-- /row-->
+            </div><!--/col leftdiv -->
+        </div><!-- /row-->
+        <footer class="row text-gray mt-auto fixed-bottom" style="background-color:<%= barColor %>">
+            <div class="col d-block d-md-none ">
+                <img src="/images/ynin-tm-logo.png" class="m-1">
+            </div>
+            <div class="col float-end text-end ">
+                <span class="fst-italic mt-2">Powered by</span>
+                <img src="/images/GITD-Rework.png" class="img-fluid bottom-right-image m-0">
+            </div>
+
         </footer>
-
-
-
-
-
-
-
-</body>
+        </div> <!-- /container -->
+        <!-- Include Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </body>
 
 </html>
