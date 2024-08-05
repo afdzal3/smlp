@@ -47,7 +47,6 @@
                 object-fit: cover;
 
 
-
             }
 
             .serviceLogoDiv {
@@ -66,8 +65,8 @@
 
 
         <div class="container-fluid" id="main">
-            <div class="row text-gray mt-auto" style="background-color:<%= barColor %>">
-                <div class="col" style="background-color: <%= barColor %>">
+            <div class="row text-gray mt-auto p-0">
+                <div class="col-7" style="background-color:<%= barColor %>">
                     <h3>
                         <% if (env.equals("dev")) { %>
                             <span style="color:white">
@@ -80,8 +79,10 @@
                                 <% } %>
                     </h3>
                 </div>
-                <div class="col text-end">
-                    <img src="/images/ynin-tm-logo.png">
+                <div class="col text-end ">
+                    <div class="float-end text-end">
+                        <img src="/images/ynin-tm-logo.png" class="bg-white m-0">
+                    </div>
                 </div>
             </div><!-- /row-->
 
@@ -91,7 +92,7 @@
             <div class="row iris3">
                 <div class="col-md-7 col-sm-12 leftDiv ">
                     <div class="row">
-                        <div class="col-12 align-items-center text-center">
+                        <div class="col-12 align-items-center text-center mt-5">
                             <h4 class="mt-1 fs-4 fw-bold">INTEGRATED REQUISITION & INTERACTIVE SERVICE DESK </h4>
                         </div>
                     </div><!-- /row-->
@@ -112,8 +113,6 @@
                                     <a href="<%= spUrl %>" class="btn btn-outline-secondary w-100 m-0 border-0">
                                         SERVICE PORTAL (SP)
                                     </a>
-                                    <br />
-                                    <small class="fst-italic">[Accessible via intranet / VPN only]</small>
                                 </div>
                             </div><!--inner row-->
                         </div>
@@ -147,6 +146,9 @@
                         </div>
                     </div><!-- /row-->
 
+                    <p></p>
+                    <p></p>
+
                     <div class="row mt-2">
                         <div class="col-12 text-center">
                             <a href="https://ibpm.tm.com.my" class="btn btn-link">GUIDELINE</a>
@@ -162,13 +164,19 @@
                 </div><!-- /row-->
             </div><!--/col leftdiv -->
         </div><!-- /row-->
-        <footer class="row text-gray mt-auto fixed-bottom" style="background-color:<%= barColor %>">
-            <div class="col d-block d-md-none ">
+        <footer class="row text-gray mt-auto fixed-bottom bg-light" >
+            <!--
+            style="background-color:<%= barColor %>"
+            <div class="col-5 d-block d-md-none ">
                 <img src="/images/ynin-tm-logo.png" class="m-1">
             </div>
-            <div class="col float-end text-end ">
-                <span class="fst-italic mt-2">Powered by</span>
-                <img src="/images/GITD-Rework.png" class="img-fluid bottom-right-image m-0">
+        -->
+            <div class="col-7"></div>
+            <div class="col float-end text-end bg-light ">
+                <div class="float-end text-end">
+                    <span class="fst-italic mt-2">Powered by</span>
+                    <img src="/images/GITD-Rework.png" class="img-fluid bottom-right-image m-0">
+                </div>
             </div>
 
         </footer>
