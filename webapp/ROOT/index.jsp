@@ -92,7 +92,7 @@
             <div class="row iris3">
                 <div class="col-md-7 col-sm-12 leftDiv ">
                     <div class="row">
-                        <div class="col-12 align-items-center text-center mt-5">
+                        <div class="col-12 align-items-center text-center mt-4">
                             <h4 class="mt-1 fs-4 fw-bold">INTEGRATED REQUISITION & INTERACTIVE SERVICE DESK </h4>
                         </div>
                     </div><!-- /row-->
