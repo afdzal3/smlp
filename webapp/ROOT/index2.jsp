@@ -1,3 +1,10 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%
+    response.setHeader("X-Frame-Options", "DENY");
+    response.setHeader("X-Content-Type-Options", "nosniff");
+    response.setHeader("Content-Security-Policy", "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net");
+%>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <%@ include file="var.jsp" %>
