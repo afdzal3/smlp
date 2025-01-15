@@ -1,8 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%
+    String nonce = java.util.UUID.randomUUID().toString();
     response.setHeader("X-Frame-Options", "DENY");
     response.setHeader("X-Content-Type-Options", "nosniff");
-    response.setHeader("Content-Security-Policy", "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net");
+    response.setHeader("Content-Security-Policy", "default-src 'self'; script-src 'self' 'nonce-" + nonce + "'; style-src 'self' 'nonce-" + nonce + "';");
 %>
 
 
@@ -19,10 +20,10 @@
         <title>IRIS</title>
 
         <!-- Include Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-            crossorigin="anonymous">
 
-        <style>
+        <link href="/bootstrap.css" rel="stylesheet">
+
+           <style nonce="<%= nonce %>">
             .iris3 {
                 background: url('/images/Background-IRIS3.jpg') no-repeat;
                 background-size: cover;
@@ -190,10 +191,8 @@
         </footer>
         </div> <!-- /container -->
         <!-- Include Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="/bootstrap.bundle.js" nonce="<%= nonce %>"></script>
+        <script src="/jquery.js" nonce="<%= nonce %>"></script>
     </body>
 
 </html>
