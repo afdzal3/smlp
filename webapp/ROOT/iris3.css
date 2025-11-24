@@ -1,0 +1,43 @@
+
+.iris3 {
+    background: url('/images/Background-IRIS3.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.leftDiv {
+    background-color: #f4f4f4;
+    height: 100vh;
+}
+
+.bottom-right-image {
+    width: 99px;
+    height: 51px;
+}
+
+.irislogo {
+    width: 20vw;
+    max-width: 249px;
+    height: auto;
+    display: block;
+    margin: 0 auto 0;
+}
+
+.serviceLogo {
+
+    height: 10em;
+    text-align: center;
+    object-fit: cover;
+
+
+}
+
+.serviceLogoDiv {
+
+    height: 12em;
+    padding: 1em;
+
+}
+
+/* Remove the empty ruleset */

@@ -1,0 +1,125 @@
+<table style="WIDTH: 98%">
+    <tbody>
+        <tr>
+            <td align="left" valign="top">
+                <table style="FONT-FAMILY: Metric Regular, arial; WIDTH: 600px">
+                    <tbody>
+                        <tr>
+                            <td valign="top">
+                                <table cellpadding="10" cellspacing="10" style="FONT-FAMILY: Metric Regular, arial"
+                                    width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td align="left" style="WIDTH: 100%" valign="top">
+                                                <h1
+                                                    style="FONT-SIZE: 18pt; FONT-FAMILY: Metric Semibold, Arial Narrow Bold; COLOR: #5e5e5e">
+                                                    IRIS</h1>
+
+                                                <table border="0" cellpadding="0" cellspacing="0" height="48"
+                                                    width="91%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td colspan="2" height="10"
+                                                                style="BACKGROUND-COLOR: #cbefe5">&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="BACKGROUND-COLOR: #cbefe5" width="10">&nbsp;</td>
+                                                            <td
+                                                                style="FONT-SIZE: 12pt; FONT-FAMILY: Metric Regular, arial; BACKGROUND-COLOR: #cbefe5">
+                                                                New Change <a href="{web_url}"
+                                                                    style="FONT-FAMILY: Metric Regular, arial; COLOR: #0082be"
+                                                                    target="_blank">{$RECORD.number}</a> has registered.
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2" height="10"
+                                                                style="BACKGROUND-COLOR: #cbefe5">&nbsp;</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" style="WIDTH: 100%" valign="top">
+                                                <div
+                                                    style="MARGIN-BOTTOM: -24px; MARGIN-TOP: -24px; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">
+                                                    <h2
+                                                        style="FONT-SIZE: 14pt; FONT-FAMILY: Metric Semibold, Arial Narrow Bold; COLOR: #5e5e5e">
+                                                        Details</h2>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <table align="center" cellpadding="6" cellspacing="2"
+                                    style="FONT-SIZE: 11pt; FONT-FAMILY: Metric Regular, arial" width="94%">
+                                    <tbody>
+                                        <tr>
+                                            <td style="COLOR: #585858" width="40%">Title</td>
+                                            <td>{$RECORD.brief_description}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="COLOR: #585858">Description</td>
+                                            <td>{$RECORD.description}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="COLOR: #585858">Service</td>
+                                            <td>{service_disp_new}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="COLOR: #585858" width="22%">Category</td>
+                                            <td>{category}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="COLOR: #585858">Subcategory</td>
+                                            <td>{$RECORD.subcategory}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="COLOR: #585858">Change Requestor</td>
+                                            <td>{$RECORD.requested_by}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="COLOR: #585858">Service</td>
+                                            <td>{$RECORD.affected_item}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="COLOR: #585858">Assignment Group</td>
+                                            <td>{$RECORD.assign_dept}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="COLOR: #585858">Coordinator</td>
+                                            <td>{$RECORD.assigned_to}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="COLOR: #585858">Target Completion Date</td>
+                                            <td>{$RECORD.requestedDate}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="COLOR: #585858">Planned Start - End Date</td>
+                                            <td>{$RECORD.planned_start} - {$RECORD.planned_end}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="COLOR: #585858">Justification</td>
+                                            <td>{$RECORD.tm_biz_justification}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div
+                                    style="FONT-SIZE: 11pt; MARGIN-TOP: 20px; POSITION: relative; COLOR: #585858; MARGIN-LEFT: 20px">
+                                    <p style="FONT-FAMILY: Metric Semibold, Arial Narrow Bold">Change Management Team
+                                    </p>
+
+                                    <p>Sent from Service Manager. Do not reply to this email.</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<p>&nbsp;</p>
